@@ -1,0 +1,339 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.navbar-link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 0 0 10px;
+}
+.padd-right-10 {
+  padding-right: 10px;
+}
+.pageContainer {
+  margin-top: 40px;
+}
+.centerText {
+  text-align: center;
+}
+.contactField {
+  width: 70%;
+}
+.messageField {
+  padding-top: 40px;
+  width: 70%;
+}
+
+.bg-tt {
+  background-color: #f1f1f1;
+}
+.padd-top-20 {
+  padding-top: 20px;
+}
+.padd-bottom-20 {
+  padding-bottom: 20px;
+}
+.shuttleInfo,
+.mapInfo {
+  text-align: center;
+  padding: 20px;
+}
+.submitContact {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.cardPadd {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.MuiCard-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cardsHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  width: 100%;
+}
+.pageContent {
+  padding: 20px 0 20px 0;
+}
+
+.modalContent {
+  display: flex;
+}
+.modalInfo1 {
+  width: 50%;
+}
+.image-gallery-slide img {
+  width: 100%;
+  height: 70vh;
+}
+.book-now {
+  color: black;
+  padding-right: 15px;
+}
+.modalInfo2 {
+  width: 50%;
+}
+.otherModalStyle {
+  width: 80%;
+}
+
+.text-center {
+  text-align: center;
+}
+.booking-area {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  color: black;
+  align-items: center;
+}
+.bg-blur {
+  filter: brightness(50%);
+}
+.locationInfo {
+  display: flex;
+}
+.text-center {
+  text-align: center;
+}
+.width-60 {
+  width: 60%;
+}
+.wrapForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.thankYou {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.locationData {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer2 svg {
+  cursor: pointer;
+}
+.footer2 {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer1 {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.googleMap {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.benefits svg {
+  width: 50px;
+  height: 50px;
+}
+.benefitsWrap {
+  width: 100%;
+}
+.benefitsItem {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.locationData svg {
+  width: 60px;
+  height: 60px;
+}
+.footer {
+  position: relative;
+  width: 100%;
+  bottom: 0%;
+  height: 40px;
+  background-color: #f1f1f1;
+}
+.errorText {
+  color: red !important;
+  font-weight: bold;
+}
+.MuiCardActions-root {
+  padding: 0px 0px 0px 8px !important;
+}
+/*
+.MuiButton-root {
+  border: 1px solid #f1f1f1 !important;
+}*/
+/*
+.MuiCardContent-root {
+  color: black;
+}*/
+.bgHeaderContent {
+  width: 100%;
+  position: absolute;
+  top: 25%;
+  color: white;
+  z-index: 999;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.icons a,
+.sideBarActions a {
+  color: black;
+}
+/*burger*/
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: white;
+}
+.black {
+  background: black !important;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #f1f1f1;
+}
+.show {
+  display: block !important;
+}
+#burger-bar-scrolled {
+  position: fixed !important;
+  display: none;
+  position: absolute;
+  height: 100px;
+  background-color: #bababa;
+  width: 100%;
+  z-index: 999;
+}
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+.padd-right-15 {
+  padding-right: 15px;
+}
+.navbar-active-mob {
+  font-weight: bold !important;
+}
+.navbar-active {
+  color: #b8b7ad;
+}
+.bookNowBtnHeader a {
+  text-decoration: none;
+  color: white;
+}
+.bookNowBtn a {
+  text-decoration: none;
+  color: black;
+}
+/*
+.MuiCardActions-root {
+  font-weight: bold;
+  padding: 0 0 0 10px !important;
+}
+*/
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #b8b7ad;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  z-index: 999999;
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #f1f1f1;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  overflow-y: hidden !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+.sideBarMenu:focus {
+  border: none !important;
+  outline: none !important;
+}
+.sideBarMenu {
+  outline: none !important;
+
+  border: none !important;
+  display: flex !important;
+  flex-direction: column;
+  padding-bottom: 20px;
+  border: none !important;
+}
+.navbar-link-mob {
+  text-decoration: none;
+  color: #373a47;
+  padding: 15px;
+}
+.menuCouple {
+  display: flex;
+  align-items: center;
+}
+.sideBarActions {
+  display: flex !important;
+  justify-content: space-around;
+  align-items: center;
+}
+/*burger*/
+.closeIcon {
+  cursor: pointer;
+  display: flex;
+  padding-right: 10px;
+  flex-direction: row;
+}
+.modalHeader {
+  display: flex;
+  align-items: center;
+}
