@@ -51,7 +51,7 @@ export class Restaurant extends Component {
       {
         header: "Non alcohol",
         cardContent:
-          "For the non alcoholic clientes , we offer a large varity of non-alcohol drinks and smoothies made with love by the pacifico staff. ",
+          "For the non alcoholic , we offer a large varity of non-alcohol drinks and smoothies made with love by the pacifico staff. ",
         cardImage: nonAlcohol,
       },
       {
@@ -61,15 +61,15 @@ export class Restaurant extends Component {
         cardImage: alcohol,
       },
       {
-        header: "Vinos",
+        header: "Wines",
         cardContent:
-          "Enjoy the best vines in town, from white wines to red wines.",
+          "Enjoy the best wines in town, from white wines to red wines.",
         cardImage: vinos,
       },
       {
         header: "Beers",
         cardContent:
-          "Tap beers are in town ! special beers straight from Cerveceria 14, Antigua are waiting just for you",
+          "Tap beers are in town ! special beers straight from Cerveceria 14, Antigua are waiting just for you. (We also offer coronas,gallos and more !)",
         cardImage: beers,
       },
     ];

@@ -28,7 +28,7 @@ export class Home extends Component {
         header: "Eat",
         cardImage: eat,
         cardContent:
-          "Fuel your body for the day with our variety of meal selections with vegan, gluten-free, vegetarian, plant-based, meat options, and more.             ",
+          "Fuel your body for the day with our variety of meal selections with vegan, vegetarian, meat options, and more.             ",
         cardButton: {
           action: "nav",
           desc: "Explore food",

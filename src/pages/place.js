@@ -91,7 +91,7 @@ export class Place extends Component {
             <LinearScaleIcon htmlColor="lightBlue" fontSize="large" />
             <div className="pageContent">
               <Typography>
-                6 Years ago we came to El paredon, and opened the first pizza
+                6 Years ago we came to El paredon, and opened our first pizza
                 place in town.
                 <br /> While our pizzas had huge success, we started to think
                 about growing <br />
@@ -105,12 +105,14 @@ export class Place extends Component {
                 <br />
                 When you come to El paredon you’ll find it to be a place of life
                 <br />
-                abundant with the big mangrooves, and of course, it’s nice
-                waves.
+                abundant with the big mangroves, and of course, it’s nice waves.
                 <br />
                 While there are advanced surf spots in Guatemala, the hostel is
                 located in the most consistant wave
                 <br /> offering surfable waves every single day .
+                <br />
+                You can also enjoy our huge pool, and relax in our garden during
+                the day.
               </Typography>
               <br />
               <Typography>

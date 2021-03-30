@@ -61,9 +61,9 @@ export default function BungaloModal(props) {
                     This is a shared accommodation and sleeps up to 5 people.
                     <br />
                     Experience a night under a traditional Guatemalan palm roof
-                    with an amazing
+                    with an amazing view from the second floor,
+                    <br /> into our huge pool and garden.
                     <br />
-                    view from the second floor into our huge pool and garden.
                     <br />
                     The room is equipped with four comfy beds (2 queens, 2
                     singles).
