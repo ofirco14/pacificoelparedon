@@ -12,7 +12,17 @@ export class Footer extends Component {
       <div className="footer">
         <Grid container>
           <Grid item xs={6} className="footer1">
-            <Typography>Made By Ofir</Typography>
+            <Typography>
+              Made By{" "}
+              <a
+                href="https://ofirco14.github.io"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ofir
+              </a>{" "}
+              © 2021
+            </Typography>
           </Grid>
 
           <Grid item xs={6} className="footer2">

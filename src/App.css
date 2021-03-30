@@ -172,6 +172,9 @@
 .MuiCardActions-root {
   padding: 0px 0px 0px 8px !important;
 }
+.footer1 a {
+  text-decoration-color: #bababa;
+}
 /*
 .MuiButton-root {
   border: 1px solid #f1f1f1 !important;
