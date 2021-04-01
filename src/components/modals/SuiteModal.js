@@ -3,8 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import { Typography } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 import Gallery from "../Gallery";
+import MediaQuery from "react-responsive";
 import CloseIcon from "@material-ui/icons/Close";
 
 const useStyles = makeStyles((theme) => ({
@@ -41,46 +42,58 @@ export default function SuiteModal(props) {
       >
         <Fade in={props.isOpen}>
           <div className={classesModal}>
-            <div className="modalContent">
-              <div className="modalInfo1">
-                <div className="modalHeader">
+            <div>
+              <Grid container>
+                <Grid item xs={6} sm={6} md={6} lg={6}>
                   <div>
-                    <CloseIcon
-                      className="closeIcon"
-                      onClick={() => {
-                        props.handleClose();
-                      }}
-                    />
+                    <div className="modalHeader">
+                      <div>
+                        <CloseIcon
+                          className="closeIcon"
+                          onClick={() => {
+                            props.handleClose();
+                          }}
+                        />
+                      </div>
+                      <div>
+                        <Typography variant="h3">Our Suites</Typography>
+                      </div>
+                    </div>
+                    <MediaQuery maxWidth={520}>
+                      <Typography variant="body1">
+                        Our most luxurious room offers two Queen Beds, and a
+                        lounge corner to relax and hang out. We have two private
+                        suites with an air conditioner , and two more suites
+                        with fans.
+                      </Typography>
+                    </MediaQuery>
+                    <MediaQuery minWidth={520}>
+                      <div className="padd-right-10">
+                        <Typography variant="body1">
+                          Our most luxurious room offers two Queen Beds, and a
+                          lounge corner to relax and hang out.
+                          <br />
+                          We have two private suites with an air conditioner ,
+                          and two more suites with fans.
+                          <br />
+                          Enjoy a wonderful night sleep in our deluxe room with
+                          comfy beds and cushions. The room is very bright due
+                          to its wide windows and comes with a private bathroom.
+                          <br />
+                          The Suite is equipped with towels and all you need to
+                          make your night the best.
+                          <br />
+                        </Typography>
+                      </div>
+                    </MediaQuery>
                   </div>
+                </Grid>
+                <Grid item xs={6} sm={6} md={6} lg={6}>
                   <div>
-                    <Typography variant="h3">Our Suites</Typography>
+                    <Gallery images={props.images} />
                   </div>
-                </div>
-                <div className="padd-right-10">
-                  <Typography variant="body1">
-                    Our most luxurious room offers two Queen Beds, and a lounge
-                    corner to relax and hang out.
-                    <br />
-                    <br />
-                    We have two private suites with an air conditioner , and two
-                    more suites with fans.
-                    <br />
-                    <br />
-                    Enjoy a wonderful night sleep in our deluxe room with comfy
-                    beds and cushions. The room is very bright due to its wide
-                    windows and comes with a private bathroom.
-                    <br />
-                    <br />
-                    The Suite is equipped with towels and all you need to make
-                    your night the best.
-                    <br />
-                    <br />
-                  </Typography>
-                </div>
-              </div>
-              <div className="modalInfo2">
-                <Gallery images={props.images} />
-              </div>
+                </Grid>
+              </Grid>
             </div>
           </div>
         </Fade>

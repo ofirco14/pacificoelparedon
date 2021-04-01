@@ -3,7 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import { Typography } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
+import MediaQuery from "react-responsive";
+
 import Gallery from "../Gallery";
 import CloseIcon from "@material-ui/icons/Close";
 
@@ -41,41 +43,51 @@ export default function BungaloModal(props) {
       >
         <Fade in={props.isOpen}>
           <div className={classesModal}>
-            <div className="modalContent">
-              <div className="modalInfo1">
-                <div className="modalHeader">
-                  <div>
-                    <CloseIcon
-                      className="closeIcon"
-                      onClick={() => {
-                        props.handleClose();
-                      }}
-                    />
+            <div>
+              <Grid container>
+                <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <div className="modalHeader">
+                    <div>
+                      <CloseIcon
+                        className="closeIcon"
+                        onClick={() => {
+                          props.handleClose();
+                        }}
+                      />
+                    </div>
+                    <div>
+                      <Typography variant="h3">Our Bungalos</Typography>
+                    </div>
                   </div>
-                  <div>
-                    <Typography variant="h3">Our Bungalos</Typography>
-                  </div>
-                </div>
-                <div className="padd-right-10">
-                  <Typography variant="body1">
-                    This is a shared accommodation and sleeps up to 5 people.
-                    <br />
-                    Experience a night under a traditional Guatemalan palm roof
-                    with an amazing view from the second floor,
-                    <br /> into our huge pool and garden.
-                    <br />
-                    <br />
-                    The room is equipped with four comfy beds (2 queens, 2
-                    singles).
-                    <br /> This studio offers maximum airflow due to wide open
-                    windows and fans
-                    <br />
-                  </Typography>
-                </div>
-              </div>
-              <div className="modalInfo2">
-                <Gallery images={props.images} />
-              </div>
+                  <MediaQuery minWidth={520}>
+                    <div className="padd-right-10">
+                      <Typography variant="body1">
+                        This is a shared accommodation and sleeps up to 5
+                        people.
+                        <br />
+                        Experience a night under a traditional Guatemalan palm
+                        roof with an amazing view from the second floor,
+                        <br /> into our huge pool and garden. The room is
+                        equipped with four comfy beds (2 queens, 2 singles).
+                        <br /> This studio offers maximum airflow due to wide
+                        open windows and fans
+                        <br />
+                      </Typography>
+                    </div>
+                  </MediaQuery>
+                  <MediaQuery maxWidth={520}>
+                    <Typography variant="body1">
+                      This is a shared accommodation and sleeps up to 5 people.
+                      <br />
+                      Experience a night under a traditional Guatemalan palm
+                      roof with an amazing view from the second floor.
+                    </Typography>
+                  </MediaQuery>
+                </Grid>
+                <Grid item xs={6} sm={6} md={6} lg={6}>
+                  <Gallery images={props.images} />
+                </Grid>
+              </Grid>
             </div>
           </div>
         </Fade>
