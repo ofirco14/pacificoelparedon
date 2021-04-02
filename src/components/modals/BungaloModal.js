@@ -45,7 +45,7 @@ export default function BungaloModal(props) {
           <div className={classesModal}>
             <div>
               <Grid container>
-                <Grid item xs={6} sm={6} md={6} lg={6}>
+                <Grid item xs={12} sm={12} md={12} lg={12}>
                   <div className="modalHeader">
                     <div>
                       <CloseIcon
@@ -59,32 +59,25 @@ export default function BungaloModal(props) {
                       <Typography variant="h3">Our Bungalos</Typography>
                     </div>
                   </div>
-                  <MediaQuery minWidth={520}>
-                    <div className="padd-right-10">
+                </Grid>
+                <Grid item xs={12} sm={12} md={12} lg={12}>
+                  <MediaQuery minWidth={600}>
+                    <div className="padd-right-10 padd-bottom-10">
                       <Typography variant="body1">
                         This is a shared accommodation and sleeps up to 5
                         people.
                         <br />
-                        Experience a night under a traditional Guatemalan palm
-                        roof with an amazing view from the second floor,
-                        <br /> into our huge pool and garden. The room is
-                        equipped with four comfy beds (2 queens, 2 singles).
-                        <br /> This studio offers maximum airflow due to wide
-                        open windows and fans
+                        The room is equipped with four comfy beds (2 queens, 2
+                        singles).
+                        <br />
+                        This bungalo offers maximum airflow due to wide open
+                        windows and fans
                         <br />
                       </Typography>
                     </div>
                   </MediaQuery>
-                  <MediaQuery maxWidth={520}>
-                    <Typography variant="body1">
-                      This is a shared accommodation and sleeps up to 5 people.
-                      <br />
-                      Experience a night under a traditional Guatemalan palm
-                      roof with an amazing view from the second floor.
-                    </Typography>
-                  </MediaQuery>
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6}>
+                <Grid item xs={12} sm={12} md={12} lg={12}>
                   <Gallery images={props.images} />
                 </Grid>
               </Grid>

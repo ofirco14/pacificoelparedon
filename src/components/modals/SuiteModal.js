@@ -44,41 +44,30 @@ export default function SuiteModal(props) {
           <div className={classesModal}>
             <div>
               <Grid container>
-                <Grid item xs={6} sm={6} md={6} lg={6}>
+                <div className="modalHeader">
                   <div>
-                    <div className="modalHeader">
-                      <div>
-                        <CloseIcon
-                          className="closeIcon"
-                          onClick={() => {
-                            props.handleClose();
-                          }}
-                        />
-                      </div>
-                      <div>
-                        <Typography variant="h3">Our Suites</Typography>
-                      </div>
-                    </div>
-                    <MediaQuery maxWidth={520}>
-                      <Typography variant="body1">
-                        Our most luxurious room offers two Queen Beds, and a
-                        lounge corner to relax and hang out. We have two private
-                        suites with an air conditioner , and two more suites
-                        with fans.
-                      </Typography>
-                    </MediaQuery>
-                    <MediaQuery minWidth={520}>
-                      <div className="padd-right-10">
+                    <CloseIcon
+                      className="closeIcon"
+                      onClick={() => {
+                        props.handleClose();
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <Typography variant="h3">Our Suites</Typography>
+                  </div>
+                </div>
+
+                <Grid item xs={12} sm={12} md={12} lg={12}>
+                  <div>
+                    <MediaQuery minWidth={600}>
+                      <div className="padd-right-10 padd-bottom-10">
                         <Typography variant="body1">
                           Our most luxurious room offers two Queen Beds, and a
                           lounge corner to relax and hang out.
                           <br />
                           We have two private suites with an air conditioner ,
                           and two more suites with fans.
-                          <br />
-                          Enjoy a wonderful night sleep in our deluxe room with
-                          comfy beds and cushions. The room is very bright due
-                          to its wide windows and comes with a private bathroom.
                           <br />
                           The Suite is equipped with towels and all you need to
                           make your night the best.
@@ -88,7 +77,7 @@ export default function SuiteModal(props) {
                     </MediaQuery>
                   </div>
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6}>
+                <Grid item xs={12} sm={12} md={12} lg={12}>
                   <div>
                     <Gallery images={props.images} />
                   </div>
