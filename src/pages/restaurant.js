@@ -7,8 +7,9 @@ import alcohol from "../images/restaurant/alcohol.jpg";
 import nonAlcohol from "../images/restaurant/non-alcohol.jpg";
 import breakfast from "../images/restaurant/breakfast.jpg";
 import plates from "../images/restaurant/plates.jpeg";
-import pizzas from "../images/restaurant/pizzas.png";
+import pizzas from "../images/restaurant/pizzas.jpg";
 import deserts from "../images/restaurant/deserts.jpg";
+import fullMenu from "../assets/fullmenu.jpg";
 import beers from "../images/restaurant/beers.jpg";
 import FastfoodIcon from "@material-ui/icons/Fastfood";
 import LocalBarIcon from "@material-ui/icons/LocalBar";
@@ -129,6 +130,20 @@ export class Restaurant extends Component {
                 })}
               </Grid>
             </div>
+            <Grid item xs={12}>
+              <div className="fullmenu">
+                <LinearScaleIcon htmlColor="lightBlue" fontSize="large" />
+                <Typography variant="h5"> Didn't find your meal ?</Typography>
+                <Typography variant="h5">
+                  {" "}
+                  Check out our{" "}
+                  <a href={fullMenu} rel="noreferrer" target="_blank">
+                    {" "}
+                    full menu
+                  </a>
+                </Typography>
+              </div>
+            </Grid>
           </Grid>
         </Grid>
       </div>

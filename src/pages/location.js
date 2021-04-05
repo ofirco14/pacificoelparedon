@@ -6,6 +6,7 @@ import { Redirect } from "react-router-dom";
 import TextField from "@material-ui/core/TextField";
 import AirportShuttleIcon from "@material-ui/icons/AirportShuttle";
 import MapIcon from "@material-ui/icons/Map";
+import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import { createMuiTheme } from "@material-ui/core/styles";
 import NearMeIcon from "@material-ui/icons/NearMe";
 import LinearScaleIcon from "@material-ui/icons/LinearScale";
@@ -252,6 +253,21 @@ export class Location extends Component {
                 Contact us
               </Typography>
               <LinearScaleIcon />
+              <Typography>Send us a message via WhatsApp:</Typography>
+              <div className="whatsapp">
+                <WhatsAppIcon fontSize="small" htmlColor="black" />{" "}
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  className=" padd-top-2"
+                  href="https://wa.me/50257881220/?text=Hi%20I%20would%20like%20to%20have%20some%20information%20about%20the%20hotel"
+                >
+                  <span className="padd-left-5">+50257881220</span>
+                </a>
+              </div>
+              <Typography>
+                Or you can contact us with the form below:
+              </Typography>
             </Grid>
             <Grid item xs={12}>
               {!this.state.isSubmitted ? (

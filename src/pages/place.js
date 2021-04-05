@@ -89,7 +89,7 @@ export class Place extends Component {
               Our history
             </Typography>
             <LinearScaleIcon htmlColor="lightBlue" fontSize="large" />
-            <div className="pageContent">
+            <div className="pageContent placeInfo">
               <Typography>
                 6 Years ago we came to El paredon, and opened our first pizza
                 place in town.

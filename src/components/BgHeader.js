@@ -58,7 +58,7 @@ class BgHeader extends React.Component {
         this.setState({
           bgObj: resBg,
           bgHeader: "Our Menu",
-          bgContent: "The best food in town, in your plate",
+          bgContent: "Check out our full menu below",
         });
         break;
       case "place":
@@ -80,7 +80,7 @@ class BgHeader extends React.Component {
         this.setState({
           bgObj: locationBg,
           bgHeader: "The area",
-          bgContent: "located in the best spot",
+          bgContent: "Located in the best spot",
         });
         break;
 

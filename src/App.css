@@ -32,6 +32,7 @@
 .padd-bottom-20 {
   padding-bottom: 20px;
 }
+.fullmenu,
 .shuttleInfo,
 .mapInfo {
   text-align: center;
@@ -64,6 +65,9 @@
 
 .modalContent {
   display: flex;
+}
+.placeInfo {
+  padding: 15px;
 }
 .modalInfo1 {
   width: 50%;
@@ -174,6 +178,22 @@
 }
 .MuiCardActions-root {
   padding: 0px 0px 0px 8px !important;
+}
+.padd-top-2 {
+  padding-top: 2px;
+}
+.padd-left-5 {
+  padding-left: 5px;
+}
+.whatsapp a,
+.fullmenu a {
+  text-decoration-color: #bababa;
+  color: #b8b7ad;
+}
+.whatsapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer1 a {
   text-decoration-color: #bababa;

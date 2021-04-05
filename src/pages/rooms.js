@@ -2,11 +2,19 @@ import React, { Component } from "react";
 import { Typography } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import bungalo from "../images/rooms/bungalo/bungalo.png";
-import suite from "../images/rooms/suite/suite.jpg";
-import suite2 from "../images/rooms/suite/suite2.jpg";
-import suite4 from "../images/rooms/suite/suite4.jpg";
+import bungalo4 from "../images/rooms/bungalo/bungalo4.jpg";
+
+import suite from "../images/rooms/suite/fan/suite.jpg";
+import suite2 from "../images/rooms/suite/fan/suite2.jpg";
+import suite4 from "../images/rooms/suite/fan/suite4.jpg";
+import suite5 from "../images/rooms/suite/ac/suite5.png";
+import suite6 from "../images/rooms/suite/ac/suite6.jpg";
+import suite7 from "../images/rooms/suite/ac/suite7.jpg";
+import suite8 from "../images/rooms/suite/ac/suite8.jpg";
+
 import HotelIcon from "@material-ui/icons/Hotel";
-import SuiteModal from "../components/modals/SuiteModal";
+import SuiteAcModal from "../components/modals/SuiteAcModal";
+import SuiteFanModal from "../components/modals/SuiteFanModal";
 import LinearScaleIcon from "@material-ui/icons/LinearScale";
 import BungaloModal from "../components/modals/BungaloModal";
 
@@ -20,24 +28,48 @@ export class Rooms extends Component {
     this.state = {
       modals: {
         bungaloModalOpened: false,
-        suiteModalOpened: false,
+        suiteAcModalOpened: false,
+        suiteFanModalOpened: false,
       },
 
-      suiteImages: [
+      suiteAcImages: [
+        {
+          original: suite5,
+          thumbnail: suite5,
+        },
+        {
+          original: suite6,
+          thumbnail: suite6,
+        },
+        {
+          original: suite7,
+          thumbnail: suite7,
+        },
+        {
+          original: suite8,
+          thumbnail: suite8,
+        },
+      ],
+      suiteFanImages: [
         {
           original: suite,
           thumbnail: suite,
         },
         {
-          original: suite2,
-          thumbnail: suite2,
-        },
-        {
           original: suite4,
           thumbnail: suite4,
         },
+        {
+          original: suite2,
+          thumbnail: suite2,
+        },
       ],
       bungaloImages: [
+        {
+          original: bungalo4,
+          thumbnail: bungalo4,
+        },
+
         {
           original: bungalo,
           thumbnail: bungalo,
@@ -57,7 +89,7 @@ export class Rooms extends Component {
     const cardComponents = [
       {
         header: "Bungalos",
-        cardImage: bungalo,
+        cardImage: bungalo4,
         cardContent:
           "This is a shared accommodation and sleeps up to 5 people.",
         cardButton: {
@@ -69,15 +101,28 @@ export class Rooms extends Component {
         },
       },
       {
-        header: "Suites",
-        cardImage: suite,
+        header: "A/C Suites",
+        cardImage: suite5,
         cardContent:
-          " Our most luxurious room offers two Queen Beds, and a lounge corner to relax and hang out.",
+          " Our most luxurious air-conditioned room offers two Queen Beds, and a lounge corner to relax and hang out.",
         cardButton: {
           action: "modal",
-          desc: "View Suites",
+          desc: "View A/C Suites",
           clickFunc: () => {
-            handleOpen("suite", true);
+            handleOpen("suiteAc", true);
+          },
+        },
+      },
+      {
+        header: "Fan Suites",
+        cardImage: suite,
+        cardContent:
+          " Our most luxurious rooms with fans offers two Queen Beds, and a lounge corner to relax and hang out.",
+        cardButton: {
+          action: "modal",
+          desc: "View fan Suites",
+          clickFunc: () => {
+            handleOpen("suiteFan", true);
           },
         },
       },
@@ -101,7 +146,7 @@ export class Rooms extends Component {
               >
                 {cardComponents.map((card) => {
                   return (
-                    <Grid item xs={12} sm={6} key={card.header}>
+                    <Grid item xs={12} sm={6} md={4} lg={4} key={card.header}>
                       <Card
                         cardButton={card.cardButton}
                         header={card.header}
@@ -116,10 +161,15 @@ export class Rooms extends Component {
           </Grid>
         </Grid>
 
-        <SuiteModal
-          images={this.state.suiteImages}
-          isOpen={this.state.modals.suiteModalOpened}
-          handleClose={() => handleOpen("suite", false)}
+        <SuiteAcModal
+          images={this.state.suiteAcImages}
+          isOpen={this.state.modals.suiteAcModalOpened}
+          handleClose={() => handleOpen("suiteAc", false)}
+        />
+        <SuiteFanModal
+          images={this.state.suiteFanImages}
+          isOpen={this.state.modals.suiteFanModalOpened}
+          handleClose={() => handleOpen("suiteFan", false)}
         />
         <BungaloModal
           images={this.state.bungaloImages}

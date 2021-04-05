@@ -63,7 +63,7 @@ export class Home extends Component {
         <Grid container>
           <Grid className="centerText" item xs={12}>
             <Typography variant="h3" className="pageTitle">
-              Welcome to Hotel Pacifico
+               Pacifico El Paredon
             </Typography>
             <div className="cardsHome">
               <Grid
